@@ -1,107 +1,261 @@
   
  
   @font-face { 
-    font-family: SeafordBold; 
-    src: url(./font/SeafordBold.ttf); 
-    font-weight: normal; 
-    }    
-    
-  @font-face { 
-    font-family: SeafordRg; 
-    src: url(./font/SeafordRg.ttf); 
-    font-weight: normal; 
-    }
+  font-family: SeafordBold; 
+  src: url(./font/SeafordBold.ttf); 
+  font-weight: normal; 
+}    
 
-    .container{
-      width: 1000px;
-      background-color: #fff;
-      margin: auto;
-
-    }
- h1 {
-    color: navy;
-    font-family: 'SeafordBold';
-    text-align: center;
-  }
-
-  h2 {
-    font-family: SeafordRg;
-    color: navy;
+@font-face { 
+  font-family: SeafordRg; 
+  src: url(./font/SeafordRg.ttf); 
+  font-weight: normal; 
 }
 
-  p.myP{
-    color: brown;
-    text-align: justify;
-   text-justify: inter-word;
-  }
+/* ===== Base Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  p{
-    font-family: SeafordRg;
-    color: black;
-  }
+body {
+  font-family: SeafordRg, Arial, sans-serif;
+  background-color: #f6f7fb;
+  color: #111;
+}
 
-  p.myP:hover{background-color: #ddd;}
+/* ===== Main Content Wrapper ===== */
+.content {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
 
+/* ===== Header Layout ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 18px;
+}
 
- body {
-        font-family: SeafordRg;
-        background-color:white;
-      }
+.header-left {
+  flex: 1;
+}
 
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+/* ===== Title + Tagline ===== */
+.myh1 {
+  color: navy;
+  font-family: SeafordBold;
+  font-size: 40px;
+  margin-bottom: 6px;
+}
 
-td {
-    text-align: center;
-  }
+.tagline {
+  color: #374151;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
 
+.subtag {
+  color: #6b7280;
+  margin-bottom: 12px;
+}
 
+/* ===== Links ===== */
+.nav-links a,
+.external-links a,
+#contact a,
+.repoLink a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  color: navy;
+  font-family: SeafordRg;
+  background-color: #fafafa;
+}
 
+.nav-links a:hover,
+.external-links a:hover,
+#contact a:hover,
+.repoLink a:hover {
+  background-color: #ddd;
+}
 
-  ol:hover{background-color: #ddd;}
+/* ===== Body Sections ===== */
+.body {
+  padding: 10px 0;
+}
 
-ul:hover{background-color: #ddd;}
+.section {
+  margin-bottom: 16px;
+}
 
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+/* ===== Headings ===== */
+h2 {
+  font-family: SeafordRg;
+  color: navy;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  font-family: SeafordRg;
+  color: black;
+}
+
+p.myP {
+  color: brown;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+}
+
+p.myP:hover {
+  background-color: #ddd;
+}
+
+.smallText {
+  margin-top: 10px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ===== Lists ===== */
+ol, ul {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+ol:hover { background-color: #ddd; }
+ul:hover { background-color: #ddd; }
+
+/* Custom numbered list style */
 ol { 
-    list-style: none; 
-    counter-reset: num; 
+  list-style: none; 
+  counter-reset: num; 
 } 
 
 ol li { 
-    counter-increment: num; 
+  counter-increment: num; 
+  margin-bottom: 6px;
 }  
-  ol li::before { 
-    content:counter(num) "."; 
-    color: blue;     
+
+ol li::before { 
+  content: counter(num) ". "; 
+  color: blue;     
 } 
 
+/* ===== Badges ===== */
+.badges {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-#mytable {
-    font-family: SeafordRg;
-    border-collapse: collapse;
-    width: 30%;
-  }
-  
-  #mytable td, #mytable th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #mytable tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #mytable tr:hover {background-color: #ddd;}
-  
-  #mytable th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: grey;
-    color: white;
-  }
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  color: #111;
+  font-size: 14px;
+}
 
-  label { display: inline-block; width: 100px; text-align: right; }
- 
- img.myImage{
+/* ===== Experience formatting ===== */
+.job {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.jobTitle {
+  font-size: 16px;
+  color: #111;
+}
+
+.jobMeta {
+  color: #6b7280;
+  font-weight: normal;
+}
+
+.jobRole {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+/* ===== Repo link ===== */
+.repoLink {
+  margin-top: 10px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 10px;
+  color: #4b5563;
+  font-family: SeafordRg;
+}
+
+/* ===== Image Style ===== */
+img.myImage {
   height: 140px;
   width: 150px;
   border-radius: 50%;
- }
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right {
+    justify-content: center;
+  }
+
+  .nav-links a,
+  .external-links a,
+  #contact a,
+  .repoLink a {
+    margin-right: 6px;
+  }
+}
+
+
+
+
